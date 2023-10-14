@@ -1,8 +1,8 @@
-import { Bars3BottomLeftIcon, XMarkIcon } from '@heroicons/react/20/solid';
 import classNames from 'classnames';
 import { ReactNode, useState } from 'react';
 import Logo from '../logo/Logo';
 import { Link } from 'react-router-dom';
+import { Icon } from '../icon/Icon';
 
 interface Props {
   children?: ReactNode;
@@ -21,19 +21,24 @@ export const DefaultLayout = ({ children }: Props) => {
   return (
     <div>
       <div className={sideBarClassName}>
-        <XMarkIcon
-          className="absolute top-1.5 right-1.5 w-6 h-6 text-white/60 hover:text-white cursor-pointer lg:hidden"
-          onClick={() => setIsOpenSideBar(!isOpenSideBar)}
-        />
+        <div onClick={() => setIsOpenSideBar(!isOpenSideBar)}>
+          <Icon
+            className="absolute top-1.5 right-1.5 text-white/60 hover:text-white cursor-pointer lg:hidden"
+            icon="X"
+            size={18}
+          ></Icon>
+        </div>
         <Link to="/">
           <Logo className="mt-[15px] ml-[26px]" />
         </Link>
       </div>
       <div className="fixed flex items-center h-[65px] border-b bg-white w-full z-10 lg:left-[270px]">
-        <Bars3BottomLeftIcon
-          className="w-9 h-9 p-2 cursor-pointer hover:bg-grey-4 ml-5 rounded-xl lg:hidden"
+        <div
+          className="p-2 cursor-pointer hover:bg-grey-4 ml-5 rounded-xl lg:hidden"
           onClick={() => setIsOpenSideBar(!isOpenSideBar)}
-        />
+        >
+          <Icon icon="list" />
+        </div>
       </div>
       <div className="px-7 pt-[96px] lg:absolute lg:left-[270px]">{children}</div>
       <div className={overleyClass} onClick={() => setIsOpenSideBar(!isOpenSideBar)}></div>

@@ -22,17 +22,18 @@
     "*.**": "prettier --check --ignore-unknown"
   },
   "dependencies": {
-    "react": "^18.2.0",
     "@headlessui/react": "^1.7.17",
-    "@heroicons/react": "^2.0.18",
+    "@phosphor-icons/react": "2.0.10",
     "classnames": "^2.3.2",
     "lodash.camelcase": "^4.3.0",
     "lodash.capitalize": "^4.2.1",
     "lodash.mergewith": "^4.6.2",
     "lodash.union": "^4.6.0",
+    "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.16.0",
-    "tailwindcss-animated": "^1.0.1"
+    "tailwindcss-animated": "^1.0.1",
+    "yarn": "^1.22.19"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.7.1",
