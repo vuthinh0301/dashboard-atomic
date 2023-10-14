@@ -3,6 +3,7 @@ import { ReactNode, useState } from 'react';
 import Logo from '../logo/Logo';
 import { Link } from 'react-router-dom';
 import { Icon } from '../icon/Icon';
+import { MenuLeft } from '../menu/MenuLeft';
 
 interface Props {
   children?: ReactNode;
@@ -18,6 +19,10 @@ export const DefaultLayout = ({ children }: Props) => {
     'fixed inset-0 backdrop-blur-sm bg-grey-1/50 z-20 lg:hidden animate-fade animate-once animate-duration-200',
     !isOpenSideBar ? 'hidden' : ''
   );
+
+  const closeSideBar = () => {
+    setIsOpenSideBar(false);
+  };
   return (
     <div>
       <div className={sideBarClassName}>
@@ -31,6 +36,7 @@ export const DefaultLayout = ({ children }: Props) => {
         <Link to="/">
           <Logo className="mt-[15px] ml-[26px]" />
         </Link>
+        <MenuLeft className="mt-5" onClick={closeSideBar} />
       </div>
       <div className="fixed flex items-center h-[65px] border-b bg-white w-full z-10 lg:left-[270px]">
         <div
