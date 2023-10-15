@@ -36,7 +36,7 @@ export const DefaultLayout = ({ children }: Props) => {
         <Link to="/">
           <Logo className="mt-[15px] ml-[26px]" />
         </Link>
-        <MenuLeft className="mt-5" onClick={closeSideBar} />
+        <MenuLeft className="mt-5 w-full" onClick={closeSideBar} />
       </div>
       <div className="fixed flex items-center h-[65px] border-b bg-white w-full z-10 lg:left-[270px]">
         <div
