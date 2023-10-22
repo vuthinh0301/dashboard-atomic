@@ -27,7 +27,9 @@ export default function ParentMenuItem({ menu, onClick }: ParentMenuProps) {
               <Icon
                 icon="caret-right"
                 size={16}
-                className={`absolute right-6 ${open ? 'rotate-90' : ''}`}
+                className={`absolute right-6 transition duration-200 ease-linear ${
+                  open ? 'rotate-90' : ''
+                }`}
               ></Icon>
             </div>
           </Disclosure.Button>

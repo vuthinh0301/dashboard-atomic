@@ -1,10 +1,11 @@
-import { Icon } from '../components/icon/Icon';
+import BasicButton from '../components/button/BasicButton';
 
 export const Overview1 = () => {
   return (
     <div>
-      <Icon icon="AirTrafficControl"></Icon>
-      Overview 1
+      <BasicButton icon="gear-six" size="normal">
+        Button
+      </BasicButton>
     </div>
   );
 };
