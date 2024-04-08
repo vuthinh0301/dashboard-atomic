@@ -14,9 +14,7 @@ function App() {
               key={route.id}
               path={route.path}
               element={
-                <Layout>
                   <Page />
-                </Layout>
               }
             />
           );
